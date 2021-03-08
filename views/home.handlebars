@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="headerMenu">
+        <header>
+            <div class="div1">
+                <img src="../images/worl.png" alt="">
+            </div>
+            <div class="div2">
+                 <h1 class="text-center">Coronavirus Disease (COVID-19)</h1></div>
+            <div class="div3">
+                <img src="../images/covidLogo1.jpg" alt="">
+            </div>
+        </header>
+    </section>  
+    
+    <section class="mainBlock">
+        <div>
+            <img src="../images/globalmap.webp" alt="">
+        </div>
+    </section> 
+
+    <section class="containeer">
+         <h1 class="CountriesHeading">All Countries (COVID-19)</h1>
+        {{#each response as |val key|}}
+          <div class="ContriesIfo">
+              <img src="{{val.countryInfo.flag}}" alt="">
+              <h2>{{val.country}}</h2> 
+               <h5>Cases:{{val.cases}}</h5>
+                <h5>Deaths:{{val.deaths}}</h5>
+                <h5>Active:{{val.active}}</h5>
+                <h5>Recovered:{{val.recovered}}</h5>
+                <h5>TodayDeaths:{{val.todayDeaths}}</h5>
+          </div>
+         {{/each}}
+    </section>
+  
+</body>
+</html>
+  {{!-- <h2>country:{{val.country}}</h2> --}}
+                {{!-- <h5>population:{{val.population}}</h5>
+                <h5>cases:{{val.cases}}</h5>
+                <h5>deaths:{{val.deaths}}</h5>
+                <h5>active:{{val.active}}</h5>
+                <h5>recovered:{{val.recovered}}</h5>
+                <h5>todayDeaths:{{val.todayDeaths}}</h5>
+                <h5>todayRecovered:{{val.todayRecovered}}</h5> --}}
+                 {{!-- <h1 class="text-center"> Coronavirus Disease (COVID-19)</h1>
+    <div class="card col-md-4 mx-auto pl-3 ">
+        <div class="card-body">
+             <img  src="{{responce.countryInfo.flag}}">
+             <h1>country{{.country}}</h1>  
+              
+        </div>
+    </div> --}}
+     {{!-- updated: 1614679210832,
+  country: 'India',
+  countryInfo: {
+    _id: 356,
+    iso2: 'IN',
+    iso3: 'IND',
+    lat: 20,
+    long: 77,
+    flag: 'https://disease.sh/assets/img/flags/in.png'
+  },
+  cases: 11124527,
+  todayCases: 908,
+  deaths: 157275,
+  todayDeaths: 0,
+  recovered: 10798921,
+  todayRecovered: 2363,
+  active: 168331,
+  critical: 8944,
+  casesPerOneMillion: 8009,
+  deathsPerOneMillion: 113,
+  tests: 217618057,
+  testsPerOneMillion: 156671,
+  population: 1389012340,
+  continent: 'Asia',
+  oneCasePerPeople: 125,
+  oneDeathPerPeople: 8832,
+  oneTestPerPeople: 6,
+  activePerOneMillion: 121.19,
+  recoveredPerOneMillion: 7774.53,
+  criticalPerOneMillion: 6.44 --}}
